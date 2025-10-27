@@ -16,6 +16,8 @@ Eight CSV files were used for the project. Although the datasets were relatively
 
 The data model created is shown below. The two data tables are connected to the lookup tables but not to each other. All relationships follow a one-to-many cardinality, with primary keys on the lookup side and foreign keys on the data side. Filters are all one-way, and the filter context flows downstream from lookup tables to data tables.
 
+![Data model](MavenMarket_Data_Model.png)
+
 Next, I created DAX measures in preparation for data visualisation. The measures include:
 * 'Years_Since_Remodel' which calculates number of years between current date and last remodel date
 * 'End of Month' which returns last date of current month for each row
@@ -24,9 +26,11 @@ Next, I created DAX measures in preparation for data visualisation. The measures
 * 'Priority' which equals 'High' for customers who own homes and have Golden membership cards (otherwise 'Standard')
 * 'Current Age' which calculates current customer ages using 'birthdate' column
 
+![DAX measures](DAX.jpg)
 
 Finally, I created the dashboard. The features of the dashboard include (i) a matrix showing top 30 brands with data bars and conditional formatting, (ii) KPI cards, (iii) a map with country slicer, (iv) a treemap with drill down function, (v) a column chart to show the weekly revenue trend, and (vi) a gauge chart to compare the total revenue against the target revenue.
 
+![MavenMarket Dashboard](MavenMarket_Dashboard.png)
 
 Insights:
 * From the previous month, Maven Market had improved by 5.69% in the number of transactions and by 5.61% in profit. The top three brands by total number of transactions were Hermanos, Ebony, and Tell Tale. Plato, BBB Best, and Cormorant had performed well in terms of profit margin. Despite being a better performer in number of transactions, Tell Tale had the second lower profit margin.
